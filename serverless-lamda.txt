@@ -1,0 +1,49 @@
+go to serveless frameword website
+
+npm i -g serverless
+serverless config credentials --provider aws --key KEY --secret SECRET
+serverless -> select any template
+
+serverless plugin install -n serverless-offline
+npm install serverless-typescript
+npm install serverless-http
+
+install : 
+    plugins:
+    - serverless-offline
+    - serverless-typescript
+
+for offline :
+    custom:
+        serverless-offline:
+            disableCookieValidation: true
+
+deploy : serverless deploy
+offline : serverless offline
+
+we can show logs in CloudWatch
+
+code:
+service: aws-lamda-serverless
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  memorySize: 512
+  timeout: 10
+
+functions:
+  apilamda:
+    # handler: lamda.handler
+    handler: build/src/index.handler
+    events:
+      - httpApi: "*"
+  apilamda2:
+    handler: build/src/controllers/user/authentication.hello
+    events:
+      - httpApi:
+          path: /hello
+          method: get
+    environment:
+      PORT: 5000

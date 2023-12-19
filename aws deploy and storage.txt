@@ -1,0 +1,36 @@
+*) fist go to IAM > users - create user :
+                                        test(name of user) - security credentials - accesskeys - create accesskeys:
+                                                                                                        other --- get accesskeys and secret key 
+
+*) S3 - create bucket :
+                        Block all public access (unchecked this)
+
+                        if ACL error occurs:
+                                        ACLs enabled
+                        
+*)  Elastic Beanstalk - craete application :
+                                        next - Create and use new service role :
+                                                                            IAM -Access management- Roles -Create Role :
+                                                                                                                    Ec2 - next :
+                                                                                                                                AmazonEC2FullAccess
+                                                                                                                                AdministratorAccess-AWSElasticBeanstalk
+                                                                                                                                AdministratorAccess              
+                                                                                                                                :
+                                                                                                                                    EC2 instance profile
+
+*) Upload and deploy:
+                    build
+                    config
+                    .npmrc
+                    package.json
+
+*) need old deploy file :
+                    Application: elacstic test > Application versions(select one) - Actions - deploy                                                                                                                            
+
+
+Region
+policy
+s3
+engine
+.env
+pipeline

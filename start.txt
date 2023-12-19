@@ -1,0 +1,39 @@
+npm init -y
+
+step 1:
+        npm i typescript -g
+        tsc --init
+
+step 2:
+        make structure
+        npm i @types/node ts-node typescript nodemon -D
+        npm i express mongoose body-parser tsc-watch
+
+step :3
+        index.ts:
+                import express from "express";
+                const app = express();
+                app.use(express.json())
+                export default app
+        
+        server.ts:
+                import app from "./src";
+                const port = 5000
+                app.listen(port, () => {
+                console.log(`server started on port ${port}.....`);
+                })
+        
+step 4:
+        package.json:
+                "build": "tsc",
+                "clean": "npx rimraf ./build",
+                "start": "node build/server.js",
+                "server": "tsc-watch --outDir ./build --onSuccess \"npm run start -- --mode=http\" --onFailure \"echo ERROR! Compilation Failed\""
+        
+        tsconfig.json:
+                "outDir": "./build",
+
+
+
+
+

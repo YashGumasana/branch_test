@@ -1,0 +1,31 @@
+*) change github credential :
+                                go to windows creddential
+
+
+*) if want to undo last commit :
+                                Commit > undo last Commit
+                                after run command "git push -f"
+
+*) abort git pull :
+                    do stages all current change and after Stash > Stash(include untracked)
+                    now "git pull"
+                    Stash > Apply latest stash
+            
+            if merge conflict occure :
+                            then select new change or current change
+                            (new changes = which we stash in local)
+                            (current changes = which we get the pull)
+
+*) change name and email:
+                        git config --global user.name "Name" 
+                        git config --global user.email "email"
+
+*) get pull from other repo or branch:
+                        ... > pull,push > pull from 
+
+*) foe accessing ptivate repo:
+                        invite collaborators in setting.
+                        
+*) merge branch:
+                 git merge branch_name
+                        
