@@ -36,4 +36,5 @@ step 4:
 
 
 https://github.com/smartstudio-biz/YoutubeAnalizer/tree/dev-Yash
+DB_URL=mongodb+srv://YashGumasana:9879445325120@nodeexpressprojects.nmkks8r.mongodb.net/LEARNNNNNNNNNNNN?retryWrites=true&w=majority
 
